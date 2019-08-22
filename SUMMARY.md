@@ -1,6 +1,9 @@
 # Summary
 
 * [JJ 的 Tester 笔记](README.md)
+
+---
+
 * 笔记
     * [软件测试理论](软件测试理论.md)
     * [Web 手工测试](web 手工测试.md)
