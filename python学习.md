@@ -855,20 +855,20 @@ def 函数名():
 
 常用函数：
 
-| 函数                | 释义                                     |
-| ------------------- | ---------------------------------------- |
-| clear()             | 清空键值对                               |
-| copy                |                                          |
-| fromkeys()          |                                          |
-| get                 |                                          |
-| items               |                                          |
-| keys                |                                          |
-| pop                 |                                          |
-| popitem             |                                          |
-| setdefault          |                                          |
-| 字典1.update(字典2) | 合并字典，如果已经存在键值对，会进行覆盖 |
-| values              |                                          |
-| 字典.len()          | 键值对数量                               |
+| 函数                              | 释义                                                         |
+| --------------------------------- | ------------------------------------------------------------ |
+| dict.clear()                      | 清空键字典内所有元素                                         |
+| dict.copy()                       | 返回一个字典的浅复制                                         |
+| re=dict.fromkeys(seq[,val])       | 创建一个新字典re,以序列seq 中元素做字典的键,val 为字典所有键值对的初始值.(dict为'关键字') |
+| dict.get(key,default=None)        | 返回指定键的值,如果值不在字典中返回default值                 |
+| dict.items()                      | 以列表返回可遍历的(键,值)元数据                              |
+| dict.keys()                       | 返回一个字典所有的键                                         |
+| dict.pop(key,[default])           | 删除字典指定键 key 所对应的值,返回值为被删除的值,key值必须给出。key如果不存在则返回列表default。 |
+| dict.popitem()                    | 随机返回并删除字典中的一对键和值。(未随机成功)               |
+| dict.setdefault(key,default=None) | 和get()类似, 但如果键不存在于字典中，将会添加键并将值设为default |
+| 字典1.update(字典2)               | 合并字典，如果已经存在键值对，会进行覆盖                     |
+| dict.values()                     | 以列表返回字典中的所有值                                     |
+| 字典.len()                        | 键值对数量                                                   |
 
 #### 字典循环遍历
 
@@ -897,17 +897,17 @@ for k in dict1:
 
 1
 
-| 函数       | 释义 |
-| ---------- | ---- |
-| maketrans  |      |
-| casefold   |      |
-| center     |      |
-| count      |      |
-| encode     |      |
-| expandtabs |      |
-| format     |      |
-| format_map |      |
-| partition  |      |
+| 函数                                             | 释义                                                         |
+| ------------------------------------------------ | ------------------------------------------------------------ |
+| maketrans(intab,outtab)                          | maketrans() 方法用于创建字符映射的转换表，对于接受两个参数的最简单的调用方式，第一个参数是字符串，表示需要转换的字符，第二个参数也是字符串表示转换的目标。 |
+| casefold                                         |                                                              |
+| string.center(width)                             | 返回一个元字符串剧中,并使用空格填充至长度 width 的新字符串   |
+| string.count(str,beg=0,end=len(string))          | 返回 str 在 string 里面出现的次数。如果 beg 或者 end 指定则返回指定范围内 str 出现的次数 |
+| string.encode(encoding='UTF-8', errors='strict') | 以 encoding 指定的编码格式编码 string，如果出错默认报一个ValueError 的异常，除非 errors 指定的是'ignore'或者'replace' |
+| string.expandtabs(tabsize=8)                     | 把字符串 string 中的 tab 符号转为空格，tab 符号默认的空格数是 8。 |
+| string.format()                                  | 格式化字符串                                                 |
+| format_map                                       |                                                              |
+| string.partition(str)                            | 有点像 find()和 split()的结合体,从 str 出现的第一个位置起,把 字 符 串 string 分 成 一 个 3 元 素 的 元 组 (string_pre_str,str,string_post_str),如果 string 中不包含str 则 string_pre_str == string. |
 
 **判断**
 
@@ -1097,9 +1097,9 @@ print('结束')
 - 哈希 是一种**算法**，其作用就是提取数据的 **特征码（指纹）**
   - **相同的内容** 得到 **相同的结果**
   - **不同的内容** 得到 **不同的结果**
-- 在 Python 中，设置字典的 键值对 时，会首先对 `key` 进行 `hash` 已决定如何在内存中保存字典的数据，以方便**后续**对字典的操作：**增删改查**
-  - key 必须时不可变类型数据
-  - value 可以是任意类型的数据
+- 在 Python 中，设置字典的 **键值对** 时，会首先对 `key` 进行 `hash` 已决定如何在内存中保存字典的数据，以方便**后续**对字典的操作：**增删改查**
+  - **key** 必须是**不可变类型**数据
+  - **value** 可以是**任意类型**的数据
 
 #### 局部变量和全局变量
 
